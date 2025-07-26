@@ -97,6 +97,4 @@ La tabla AUDITORIA almacena trazabilidad de operaciones:
 Jhonatan Mantilla
 - 📧 jhonatanmm.1995@gmail.com
 - 🔗 https://github.com/GAMM95
-
-
-<!-- https://markdownlivepreview.com/ --> 
+- 🔗 https://www.linkedin.com/in/jhonatan-mantilla-jmm190395/
