@@ -61,11 +61,17 @@ Ejecuta los scripts en el siguiente orden:
 | `USUARIO`       | Usuarios del sistema con credenciales y roles     |
 
 ---
-## 🖼️ Diagrama ER
+## 👨‍💻 Diagrama ER
 
-Puedes visualizar la estructura completa en:
 
-![Modelo ER](https://github.com/GAMM95/Incidencias_model/raw/main/SQL%20model/Model.png)
+<img 
+  src="https://raw.githubusercontent.com/GAMM95/incidencias_db/main/SQL/Model.png" 
+  alt="Modelo ER"
+  width="600"
+/>
+
+
+![Modelo ER](https://raw.githubusercontent.com/GAMM95/incidencias_db/main/SQL/Model.png)
 
 ---
 
