@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/Scripts/Data.sql" dialect="TSQL" />
-    <file url="file://$PROJECT_DIR$/Scripts/Tablas.sql" dialect="TSQL" />
-    <file url="file://$PROJECT_DIR$/Store Procedures/sp_auditoria.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/SQL/procedures/sp_auditoria.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/SQL/scripts/Data.sql" dialect="TSQL" />
+    <file url="file://$PROJECT_DIR$/SQL/scripts/Tablas.sql" dialect="TSQL" />
     <file url="PROJECT" dialect="TSQL" />
   </component>
 </project>
