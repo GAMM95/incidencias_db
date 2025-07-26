@@ -165,8 +165,7 @@ BEGIN
                 IF @hashed_password IS NULL
                     BEGIN
                         SET @Mensaje = N'Error al generar el hash de la contraseña.';
-                        SET @Respuesta = 0;
-                        ROLLBACK TRANSACTION;
+                        ROLLBACK;
                         RETURN;
                     END
 
@@ -179,7 +178,7 @@ BEGIN
                 VALUES (@NuevoCod, @Username, @hashed_password, @salt, @CodPersona, @CodRol, @CodArea, 1);
 
                 -- Auditoría
-                SET @RegistroAuditoria = 'CodUsuario: ' + CAST(@NuevoCod AS VARCHAR);
+                SET @RegistroAuditoria = 'Cod: ' + CAST(@NuevoCod AS VARCHAR);
                 SET @ValorDespues = FORMATMESSAGE(N'Username = "%s", CodPersona = %d, CodRol = %d, CodArea = %d',
                                                   ISNULL(@Username, ''), ISNULL(@CodPersona, 0), ISNULL(@CodRol, 0),
                                                   ISNULL(@CodArea, 0));
@@ -187,7 +186,6 @@ BEGIN
 
                 -- Confirmar la transacción: todos los cambios han sido validados correctamente
                 COMMIT;
-
                 -- Mostrar mensaje de salida
                 SET @Mensaje = N'Usuario registrado.';
                 SET @Respuesta = 1;
@@ -249,7 +247,7 @@ BEGIN
             WHERE USU_codigo = @CodUsuario;
 
             -- Auditoría
-            SET @RegistroAuditoria = 'CodUsuario: ' + CAST(@CodUsuario AS VARCHAR);
+            SET @RegistroAuditoria = 'Cod: ' + CAST(@CodUsuario AS VARCHAR);
             EXEC sp_auditoria 2, N'Usuario', NULL, @RegistroAuditoria, @ValorAntes, @ValorDespues, @Usuario;
 
             -- Confirmar la transacción: todos los cambios han sido validados correctamente

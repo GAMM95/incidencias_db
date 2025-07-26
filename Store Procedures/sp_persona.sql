@@ -18,6 +18,7 @@ BEGIN
 
     SET NOCOUNT ON;
 
+    -- Inicializar salida
     SET @Respuesta = 0;
     SET @Mensaje = '';
 
@@ -44,10 +45,11 @@ BEGIN
                 -- Obtener el codigo de la persona creada por ser identity
                 DECLARE @NewCodPersona SMALLINT = SCOPE_IDENTITY();
 
+                -- TODO: Agregar más detalles de auditoría si es necesario
                 -- Valores de auditoria
                 SET @RegistroAuditoria = N'Código: ' + CAST(@NewCodPersona AS NVARCHAR);
---                 TODO: AGREGAR CAMPO AUDITORI
-                SET @ValorDespues = FORMATMESSAGE('');
+
+                SET SET @ValorDespues = FORMATMESSAGE('');
                 EXEC sp_auditoria 1, N'Persona', NULL, @Dni, NULL, NULL, @Usuario;
 
                 -- Confirmar la transacción: todos los cambios han sido validados correctamente

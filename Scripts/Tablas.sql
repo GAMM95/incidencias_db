@@ -20,7 +20,7 @@ GO
 CREATE TABLE ROL
 (
     ROL_codigo SMALLINT IDENTITY (1,1) NOT NULL,
-    ROL_nombre NVARCHAR(20),
+    ROL_nombre NVARCHAR(20)            NOT NULL,
     CONSTRAINT PK_rol PRIMARY KEY (ROL_codigo)
 );
 GO
@@ -29,8 +29,8 @@ GO
 CREATE TABLE ESTADO
 (
     EST_codigo      SMALLINT IDENTITY (1,1),
-    EST_descripcion NVARCHAR(20),
-    CONSTRAINT PK_estado PRIMARY KEY (EST_descripcion)
+    EST_descripcion NVARCHAR(20) NOT NULL,
+    CONSTRAINT PK_estado PRIMARY KEY (EST_codigo)
 );
 GO
 
@@ -62,14 +62,14 @@ GO
 -- CREACION DE LA TABLA USUARIO
 CREATE TABLE USUARIO
 (
-    USU_codigo    SMALLINT       NOT NULL,
-    USU_nombre    NVARCHAR(50)   NOT NULL,
-    USU_password  VARBINARY(20)  NOT NULL,
-    USU_salt      UNIQUEIDENTIFIER NULL,
-    PER_codigo    SMALLINT       NULL,
-    ROL_codigo    SMALLINT       NOT NULL,
-    ARE_codigo    SMALLINT       NOT NULL,
-    EST_codigo    SMALLINT       NOT NULL,
+    USU_codigo   SMALLINT         NOT NULL,
+    USU_nombre   NVARCHAR(50)     NOT NULL,
+    USU_password VARBINARY(20)    NOT NULL,
+    USU_salt     UNIQUEIDENTIFIER NULL,
+    PER_codigo   SMALLINT         NULL,
+    ROL_codigo   SMALLINT         NOT NULL,
+    ARE_codigo   SMALLINT         NOT NULL,
+    EST_codigo   SMALLINT         NOT NULL,
     CONSTRAINT PK_usuario PRIMARY KEY (USU_codigo),
     CONSTRAINT UQ_nombreUsuario UNIQUE (USU_nombre),
     CONSTRAINT FK_persona_usuario FOREIGN KEY (PER_codigo) REFERENCES PERSONA (PER_codigo),
@@ -94,7 +94,7 @@ CREATE TABLE CATEGORIA
     CAT_codigo SMALLINT     NOT NULL,
     CAT_nombre NVARCHAR(60) NOT NULL,
     EST_codigo SMALLINT     NOT NULL,
-    CONSTRAINT PK_categoria PRIMARY KEY (CAT_codigo),
+    CONSTRAINT  PRIMARY KEY (CAT_codigo),
     CONSTRAINT UQ_nombreCategoria UNIQUE (CAT_nombre)
 );
 GO
@@ -234,16 +234,16 @@ GO
 --CREACION DE LA TABLA AUDITORIA
 CREATE TABLE AUDITORIA
 (
-    AUD_codigo       SMALLINT IDENTITY (1,1),
-    AUD_tabla        NVARCHAR(255) NULL,
-    AUD_operacion    NVARCHAR(100) NULL,
-    AUD_fecha        DATETIME      NULL,
-    AUD_valorAntes   NVARCHAR(MAX) NULL,
-    AUD_valorDespues NVARCHAR(MAX) NULL,
-    AUD_ipEquipo     NVARCHAR(50)  NULL,
-    AUD_nombreEquipo NVARCHAR(200) NULL,
-    AUD_registro     NVARCHAR(MAX) NULL,
-    AUD_usuario      SMALLINT      NULL,
-    CONSTRAINT pk_auditoria PRIMARY KEY (AUD_codigo)
+    AUD_codigo       INT IDENTITY (1,1) NOT NULL,
+    AUD_tabla        NVARCHAR(255)      NULL,
+    AUD_operacion    NVARCHAR(100)      NULL,
+    AUD_fecha        DATETIME           NULL,
+    AUD_valorAntes   NVARCHAR(MAX)      NULL,
+    AUD_valorDespues NVARCHAR(MAX)      NULL,
+    AUD_ipEquipo     NVARCHAR(50)       NULL,
+    AUD_nombreEquipo NVARCHAR(200)      NULL,
+    AUD_registro     NVARCHAR(MAX)      NULL,
+    AUD_usuario      SMALLINT           NULL,
+    CONSTRAINT PK_auditoria PRIMARY KEY (AUD_codigo)
 );
 GO
