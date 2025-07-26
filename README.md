@@ -63,15 +63,10 @@ Ejecuta los scripts en el siguiente orden:
 ---
 ## 👨‍💻 Diagrama ER
 
-
-<img 
-  src="https://raw.githubusercontent.com/GAMM95/incidencias_db/main/SQL/Model.png" 
-  alt="Modelo ER"
-  width="600"
-/>
-
-
-![Modelo ER](https://raw.githubusercontent.com/GAMM95/incidencias_db/main/SQL/Model.png)
+  <img  
+    src="SQL/Model.png" style="width: 40%" aling="center"
+    alt="Modelo ER"
+  />
 
 ---
 
@@ -102,3 +97,8 @@ La tabla AUDITORIA almacena trazabilidad de operaciones:
 Jhonatan Mantilla
 📧 jhonatanmm.1995@gmail.com
 🔗 https://github.com/GAMM95
+
+
+
+
+<!-- https://markdownlivepreview.com/ -->
