@@ -9,7 +9,7 @@ Este proyecto contiene el modelo completo de la base de datos `incidencias`, dis
 - `/sql/` - Scripts SQL para crear la base de datos y sus objetos.
 - `/diagramas/` - Diagramas ERD u otros modelos visuales.
 - `/data/` - Datos de prueba o cargas iniciales (opcional).
-- `/docs/` - Documentación adicional (glosarios, reglas de negocio, etc.).
+- `/docs/` - Documentación adicional (Diccionario de datos, modelo ER, etc.).
 
 
 ## ⚙️ Requisitos
@@ -28,17 +28,17 @@ Este proyecto contiene el modelo completo de la base de datos `incidencias`, dis
    https://github.com/GAMM95/incidencias_db.git
    cd incidencias-db/sql
 
-Ejecuta los scripts en el siguiente orden:
+Ejecuta los scripts (`SQL/scripts/`) en el siguiente orden:
 
-- 1. `01_crear_base_datos.sql`
-- 2. `02_crear_tablas.sql`
-- 3. `03_vistas.sql`
-- 4. `04_funciones.sql`
-- 5. `05_procedimientos.sql`
-- 6. `06_datos_prueba.sql` (opcional)
+-  `01_crear_base_datos.sql`
+-  `02_crear_tablas.sql`
+-  `03_vistas.sql`
+-  `04_funciones.sql`
+-  `05_procedimientos.sql`
+-  `06_datos_prueba.sql` (opcional)
 
 ---
-## 📑 Tablas principales
+
 ## 📑 Tablas principales
 | Tabla           | Descripción                                       |
 | --------------- | ------------------------------------------------- |
@@ -65,11 +65,7 @@ Ejecuta los scripts en el siguiente orden:
 ## 👨‍💻 Diagrama ER
 
 <p align="center">
-  <img  
-    src="SQL/Model.png"
-    alt="Modelo ER"
-    width="100%"
-  />
+  <img src="docs/Model.png" alt="Modelo ER"/>
 </p>
 
 ---
@@ -99,10 +95,6 @@ La tabla AUDITORIA almacena trazabilidad de operaciones:
 
 ## 👨‍💻 Autor
 Jhonatan Mantilla
-📧 jhonatanmm.1995@gmail.com
-🔗 https://github.com/GAMM95
-
-
-
-
-<!-- https://markdownlivepreview.com/ -->
+- 📧 jhonatanmm.1995@gmail.com
+- 🔗 https://github.com/GAMM95
+- 🔗 https://www.linkedin.com/in/jhonatan-mantilla-jmm190395/
