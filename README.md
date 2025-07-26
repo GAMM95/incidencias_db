@@ -61,12 +61,16 @@ Ejecuta los scripts en el siguiente orden:
 | `USUARIO`       | Usuarios del sistema con credenciales y roles     |
 
 ---
+
 ## 👨‍💻 Diagrama ER
 
+<p align="center">
   <img  
-    src="SQL/Model.png" style="width: 40%" aling="center"
+    src="SQL/Model.png"
     alt="Modelo ER"
+    width="100%"
   />
+</p>
 
 ---
 
